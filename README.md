@@ -18,3 +18,4 @@ Services:
       "levelReached":7,  
       "regDate":1478982104144,  
       "timeSpendMilisenconds":30000}  
+HEROKU DEPLOYMENT URL: https://alzheimerpersistence.herokuapp.com/
