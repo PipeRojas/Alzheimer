@@ -10,4 +10,5 @@ import java.util.List;
 public interface PatientServices {
     public List<DataPOJO> getResumesById(Integer id) throws Exception;
     public void addResumeToId(DataPOJO resume,Integer id);
+    public  List<DataPOJO> getAllResumes();
 }

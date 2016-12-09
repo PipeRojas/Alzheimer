@@ -58,4 +58,17 @@ public class PatientServices1stImpl implements PatientServices{
             resumes.get(id).add(resume);
         }
     }
+
+    @Override
+    public List<DataPOJO> getAllResumes() {
+        List<DataPOJO> ans=new ArrayList<>();
+        for (Integer i:resumes.keySet()
+             ) {
+            for (DataPOJO d:resumes.get(i)
+                 ) {
+                ans.add(d);
+            }
+        }
+        return ans;
+    }
 }
