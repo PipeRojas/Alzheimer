@@ -22,6 +22,48 @@ div.body {
   <label ng-show="top10MasJuegan"><b>Top 10 Pacientes que más Juegan (Partidas/Paciente)</b></label>
   <br>
   <canvas ng-show="top10MasJuegan" id="top10MasJuegan" class="chart chart-bar"
-          chart-data="data" chart-labels="labels"> chart-series="series"
+          chart-data="top10MasJuegandata" chart-labels="top10MasJueganlabels" chart-series="top10MasJueganseries">
   </canvas>
 </div>
+<br>
+<br>
+<button ng-click="juegosPorPartidasBtn()">Cantidad de Partidas Jugadas por Juego</button>
+<div class="body">
+  <br>
+  <br>
+  <br>
+  <label ng-show="juegosPorPartidas"><b>Cantidad de Partidas Jugadas por Juego</b></label>
+  <br>
+  <canvas ng-show="juegosPorPartidas" id="juegosPorPartidas" class="chart chart-radar"
+          chart-data="juegosPorPartidasdata" chart-options="options" chart-labels="juegosPorPartidaslabels">
+  </canvas>
+</div>
+<br>
+<br>
+<button ng-click="juegosPorPartidasBtn()">Cantidad de Partidas Jugadas por Juego</button>
+<div class="body">
+  <br>
+  <br>
+  <br>
+  <label ng-show="nivelMaximoPorJuego"><b>Nivel Máximo Alcanzado por Juego</b></label>
+  <br>
+  <canvas ng-show="nivelMaximoPorJuego" id="nivelMaximoPorJuego" class="chart chart-pie"
+          chart-data="nivelMaximoPorJuegodata" chart-labels="nivelMaximoPorJuegolabels" chart-options="options">
+  </canvas>
+</div>
+<br>
+<br>
+<button ng-click="nivelMaximoPorJuegoBtn()">Nivel Máximo Alcanzado por Juego</button>
+<div class="body">
+  <br>
+  <br>
+  <br>
+  <label ng-show="tiempoMinimoPorJuego"><b>Tiempo Mínimo Alcanzado por Juego (Segundos)</b></label>
+  <br>
+  <canvas ng-show="tiempoMinimoPorJuego" id="tiempoMinimoPorJuego" class="chart chart-polar-area"
+          chart-data="tiempoMinimoPorJuegodata" chart-labels="tiempoMinimoPorJuegolabels" chart-options="options">
+  </canvas>
+</div>
+<br>
+<br>
+<button ng-click="tiempoMinimoPorJuegoBtn()">Tiempo Mínimo Alcanzado por Juego</button>
