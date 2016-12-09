@@ -9,9 +9,32 @@ angular.module('myApp.resumeOnePacient', ['ngRoute'])
   });
 }])
 
-.controller('resumeOnePacientCtrl', ['$scope', '$timeout', function($scope, $timeout) {
+.controller('resumeOnePacientCtrl', ['$scope', '$timeout', 'resumesById', function($scope, $timeout, resumesById) {
 
-    $scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
-      $scope.data = [300, 500, 100];
+    $scope.datosCargados=false;
+    $scope.patientid='';
+
+    $scope.getPatient=function(){
+        resumesById.get({idpatient:$scope.patientid})
+        .$promise.then(
+            //success
+            function(value){
+                $scope.datosCargados=true;
+            },
+            //error
+            function(error){
+            }
+        );
+    };
+
+    //Juegos por veces jugadas
+
+    $scope.juegosPorVecesJugadas=false;
+    $scope.juegosPorVecesJugadasBtn=function(){
+        $scope.juegosPorVecesJugadas=!$scope.juegosPorVecesJugadas;
+    };
+
+    $scope.juegosPorVecesJugadaslabels = ["Sopa de Letras", "Parejas", "Crucigrama", "Encuentra Diferencia"];
+    $scope.juegosPorVecesJugadasdata = [20, 70, 13, 40];
 
 }]);
