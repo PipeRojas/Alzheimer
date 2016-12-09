@@ -1,0 +1,27 @@
+<head>
+  <style>
+div.body {
+  text-align: center;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-orient: column;
+  flex-grow: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(230, 249, 255);
+}
+</style>
+</head>
+<button ng-click="top10MasJueganBtn()">Top 10 Pacientes que más juegan</button>
+<div class="body">
+  <br>
+  <br>
+  <br>
+  <label ng-show="top10MasJuegan"><b>Top 10 Pacientes que más Juegan (Partidas/Paciente)</b></label>
+  <br>
+  <canvas ng-show="top10MasJuegan" id="top10MasJuegan" class="chart chart-bar"
+          chart-data="data" chart-labels="labels"> chart-series="series"
+  </canvas>
+</div>

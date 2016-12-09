@@ -22,7 +22,7 @@ public class PatientRestController {
         return "Patients REST Controller Works";
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/{idPatient}/resume")
+    @RequestMapping(method = RequestMethod.GET, path = "/{idpatient}/resume")
     public ResponseEntity<?> getPatientResumeById(@PathVariable Integer idPatient){
         List<DataPOJO> ans=null;
         try {
@@ -33,7 +33,18 @@ public class PatientRestController {
         return new ResponseEntity<>(ans, HttpStatus.ACCEPTED);
     }
 
-    @RequestMapping(method = RequestMethod.POST, path = "/{idPatient}/resume")
+    @RequestMapping(method = RequestMethod.GET, path = "/resumes")
+    public ResponseEntity<?> getAllResumes(){
+        List<DataPOJO> ans=null;
+        try {
+            ans=services.getAllResumes();
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(ans, HttpStatus.ACCEPTED);
+    }
+
+    @RequestMapping(method = RequestMethod.POST, path = "/{idpatient}/resumes")
     public ResponseEntity<?> addPatientResumeById(@PathVariable Integer idPatient, @RequestBody DataPOJO resume){
         services.addResumeToId(resume, idPatient);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
