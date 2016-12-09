@@ -22,7 +22,25 @@ public class PatientServices1stImpl implements PatientServices{
         resumeId.setGameName("Sopa Letras");
         resumeId.setLevelReached(7);
         resumeId.setTimeSpendMilisenconds(new Long(30000));
+        //
+        resumeId=new DataPOJO();
+        resumeId.setPatientName("Maria Camila");
+        resumeId.setPatientLastName("Rodriguez Velez");
+        resumeId.setRegDate(new Date());
+        resumeId.setGameName("Concentrate");
+        resumeId.setLevelReached(8);
+        resumeId.setTimeSpendMilisenconds(new Long(50000));
         resumesId.add(resumeId);
+        //
+        resumeId=new DataPOJO();
+        resumeId.setPatientName("Maria Camila");
+        resumeId.setPatientLastName("Rodriguez Velez");
+        resumeId.setRegDate(new Date());
+        resumeId.setGameName("Diferencias");
+        resumeId.setLevelReached(4);
+        resumeId.setTimeSpendMilisenconds(new Long(60000));
+        resumesId.add(resumeId);
+        //
         resumes.put(123456789, resumesId);
     }
 
