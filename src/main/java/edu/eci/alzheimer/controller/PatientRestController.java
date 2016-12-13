@@ -50,4 +50,16 @@ public class PatientRestController {
         services.addResumeToId(resume, idpatient);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
+    /**
+    @RequestMapping(method = RequestMethod.GET, path = "/resumes/top")
+    public ResponseEntity<?> getTop10Resumes(){
+        List<DataPOJO> ans=null;
+        try {
+            ans=services.getTop10Resumes();
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(ans, HttpStatus.ACCEPTED);
+    }
+    */
 }

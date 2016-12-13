@@ -314,13 +314,33 @@ public class PatientServices1stImpl implements PatientServices{
     @Override
     public List<DataPOJO> getAllResumes() {
         List<DataPOJO> ans=new ArrayList<>();
-        for (Integer i:resumes.keySet()
-                ) {
-            for (DataPOJO d:resumes.get(i)
-                    ) {
+        for (Integer i:resumes.keySet()) {
+            for (DataPOJO d:resumes.get(i)) {
                 ans.add(d);
             }
         }
         return ans;
     }
+    /**
+    @Override
+    public List<DataPOJO> getTop10AllResumes() {
+        List<DataPOJO> r=this.getAllResumes();
+        Map<String,Integer> res= new HashMap<String,Integer>();
+        for (DataPOJO d:r){
+            if(!res.keySet().contains(d.getPatientName())) {
+                res.put(d.getPatientName(), res.get(d.getPatientName()) + 1);
+            }
+        }
+        Collection<Integer> cantidad = res.values();
+        Iterator<Integer> it = cantidad.iterator();
+        int[] numCant=new int[cantidad.size()];
+        int c=0;
+        while(it.hasNext()) {
+            int i = it.next();
+            numCant[c]=i;
+            c++;
+        }
+
+    }
+    **/
 }

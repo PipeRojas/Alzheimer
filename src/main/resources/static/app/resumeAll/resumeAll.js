@@ -11,24 +11,32 @@ angular.module('myApp.resumeAll', ['ngRoute','ngResource'])
 
 .controller('resumeAllCtrl', ['$scope', '$timeout', '$http', 'allResumes', function($scope, $timeout, $http, allResumes) {
 
-    var allData=[];
+    $scope.allData=[];
 
     allResumes.get()
     .$promise.then(
         //success
         function(value){
             //Hacer algo con value
+            /**
             for(var i=0; i<value.length; i++){
                 if(value[i].patientName!==null){
                     allData.push(value[i]);
                 }
             }
+            */
+            $scope.allData=value.slice(0);
         },
         //error
         function(error){
             //Hacer algo con el error
         }
     );
+
+    console.info($scope.allData.length);
+
+    var top10MasJueganlabelsSumado=[];
+    var top10MasJuegandataSumado=[];
 
     var top10MasJueganlabels=[];
     var top10MasJuegandata=[];
@@ -42,9 +50,22 @@ angular.module('myApp.resumeAll', ['ngRoute','ngResource'])
     var tiempoMinimoPorJuegolabels=[];
     var tiempoMinimoPorJuegodata=[];
 
+    /**
     for(var i=0; i<allData.length; i++){
-        
+        var nombre=allData[i].patientName;
+        var inArray=false;
+        for(var j=0; j<top10MasJueganlabelsSumado.length; j++){
+            if(nombre==top10MasJueganlabelsSumado[i]){
+                top10MasJuegandataSumado[i]++;
+                inArray=true;
+            }
+        }
+        if(!inArray){
+            top10MasJueganlabelsSumado.push(nombre);
+            top10MasJuegandataSumado.push(1);
+        }
     }
+    */
 
 
 
@@ -73,7 +94,7 @@ angular.module('myApp.resumeAll', ['ngRoute','ngResource'])
     $scope.juegosPorPartidaslabels =["Sopa de Letras", "Parejas", "Crucigrama", "Encuentra Diferencia"];
 
     $scope.juegosPorPartidasdata =
-    [65, 59, 90, 81];
+    [[65, 59, 90, 81]];
 
     //Nivel máximo por cada juego
 
