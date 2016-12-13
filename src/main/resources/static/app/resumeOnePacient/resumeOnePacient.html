@@ -2,7 +2,7 @@
   <style>
 div.body {
   text-align: center;
-  width: 90%;
+  width: 70%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -25,9 +25,38 @@ div.body {
   <br>
   <label ng-show="juegosPorVecesJugadas"><b>Cantidad de Partidas por Juego</b></label>
   <br>
-  <canvas id="juegosPorVecesJugadas" class="chart chart-doughnut"
+  <canvas ng-show="juegosPorVecesJugadas" id="juegosPorVecesJugadas" class="chart chart-doughnut"
           chart-data="juegosPorVecesJugadasdata" chart-labels="juegosPorVecesJugadaslabels">
   </canvas>
+</div>
+<br>
+<br>
+
+<button ng-click="juegosPorNivelMaximoBtn()">Nivel Máximo Alcanzado por Juego</button>
+<div class="body">
+  <br>
+  <br>
+  <br>
+  <label ng-show="juegosPorNivelMaximo"><b>Nivel Máximo Alcanzado por Juego</b></label>
+  <br>
+  <canvas ng-show="juegosPorNivelMaximo" id="juegosPorNivelMaximo" class="chart chart-pie"
+          chart-data="juegosPorNivelMaximodata" chart-options="options" chart-labels="juegosPorNivelMaximolabels">
+  </canvas>
+</div>
+<br>
+<br>
+
+<button ng-click="juegosPorTiempoMinimoBtn()">Tiempo Mínimo Alcanzado por Juego</button>
+<div class="body">
+  <br>
+  <br>
+  <br>
+  <label ng-show="juegosPorTiempoMinimo"><b>Tiempo Mínimo Alcanzado por Juego (Segundos)</b></label>
+  <br>
+  <canvas ng-show="juegosPorTiempoMinimo" id="juegosPorTiempoMinimo" class="chart-base" chart-type="juegosPorTiempoMinimotype"
+          chart-data="juegosPorTiempoMinimodata" chart-labels="juegosPorTiempoMinimolabels" >
+  </canvas>
+  <button ng-show="juegosPorTiempoMinimo" ng-click="juegosPorTiempoMinimotoggle()">Alternar Tipo de Gráfico</button>
 </div>
 <br>
 <br>
