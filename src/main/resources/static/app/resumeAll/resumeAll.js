@@ -11,17 +11,42 @@ angular.module('myApp.resumeAll', ['ngRoute','ngResource'])
 
 .controller('resumeAllCtrl', ['$scope', '$timeout', '$http', 'allResumes', function($scope, $timeout, $http, allResumes) {
 
+    var allData=[];
+
     allResumes.get()
     .$promise.then(
         //success
         function(value){
             //Hacer algo con value
+            for(var i=0; i<value.length; i++){
+                if(value[i].patientName!==null){
+                    allData.push(value[i]);
+                }
+            }
         },
         //error
         function(error){
             //Hacer algo con el error
         }
     );
+
+    var top10MasJueganlabels=[];
+    var top10MasJuegandata=[];
+
+    var juegosPorPartidaslabels=[];
+    var juegosPorPartidasdata=[];
+
+    var nivelMaximoPorJuegolabels=[];
+    var nivelMaximoPorJuegodata=[];
+
+    var tiempoMinimoPorJuegolabels=[];
+    var tiempoMinimoPorJuegodata=[];
+
+    for(var i=0; i<allData.length; i++){
+        
+    }
+
+
 
     //Top 10 jugadores que mas juegan
 
@@ -47,9 +72,8 @@ angular.module('myApp.resumeAll', ['ngRoute','ngResource'])
 
     $scope.juegosPorPartidaslabels =["Sopa de Letras", "Parejas", "Crucigrama", "Encuentra Diferencia"];
 
-    $scope.juegosPorPartidasdata = [
-    [65, 59, 90, 81]
-    ];
+    $scope.juegosPorPartidasdata =
+    [65, 59, 90, 81];
 
     //Nivel máximo por cada juego
 
