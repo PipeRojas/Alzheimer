@@ -22,6 +22,7 @@ public class PatientServices1stImpl implements PatientServices{
         resumeId.setGameName("Sopa Letras");
         resumeId.setLevelReached(7);
         resumeId.setTimeSpendMilisenconds(new Long(30000));
+        resumesId.add(resumeId);
         //
         resumeId=new DataPOJO();
         resumeId.setPatientName("Maria Camila");
@@ -51,6 +52,7 @@ public class PatientServices1stImpl implements PatientServices{
         resumeId.setGameName("Concentrate");
         resumeId.setLevelReached(15);
         resumeId.setTimeSpendMilisenconds(new Long(80000));
+        resumesId.add(resumeId);
         //
         resumeId=new DataPOJO();
         resumeId.setPatientName("Oscar Andres");
@@ -80,6 +82,7 @@ public class PatientServices1stImpl implements PatientServices{
         resumeId.setGameName("Concentrate");
         resumeId.setLevelReached(6);
         resumeId.setTimeSpendMilisenconds(new Long(20000));
+        resumesId.add(resumeId);
         //
         resumeId=new DataPOJO();
         resumeId.setPatientName("Fabian David");
@@ -109,6 +112,7 @@ public class PatientServices1stImpl implements PatientServices{
         resumeId.setGameName("Concentrate");
         resumeId.setLevelReached(1);
         resumeId.setTimeSpendMilisenconds(new Long(8000));
+        resumesId.add(resumeId);
         //
         resumeId=new DataPOJO();
         resumeId.setPatientName("Andrea Carolina");
@@ -138,6 +142,7 @@ public class PatientServices1stImpl implements PatientServices{
         resumeId.setGameName("Concentrate");
         resumeId.setLevelReached(23);
         resumeId.setTimeSpendMilisenconds(new Long(500000));
+        resumesId.add(resumeId);
         //
         resumeId=new DataPOJO();
         resumeId.setPatientName("Juan David");
@@ -167,6 +172,7 @@ public class PatientServices1stImpl implements PatientServices{
         resumeId.setGameName("Concentrate");
         resumeId.setLevelReached(8);
         resumeId.setTimeSpendMilisenconds(new Long(80000));
+        resumesId.add(resumeId);
         //
         resumeId=new DataPOJO();
         resumeId.setPatientName("Camila Andrea");
@@ -196,6 +202,7 @@ public class PatientServices1stImpl implements PatientServices{
         resumeId.setGameName("Concentrate");
         resumeId.setLevelReached(9);
         resumeId.setTimeSpendMilisenconds(new Long(60000));
+        resumesId.add(resumeId);
         //
         resumeId=new DataPOJO();
         resumeId.setPatientName("Julian Andres");
@@ -225,6 +232,7 @@ public class PatientServices1stImpl implements PatientServices{
         resumeId.setGameName("Concentrate");
         resumeId.setLevelReached(5);
         resumeId.setTimeSpendMilisenconds(new Long(70000));
+        resumesId.add(resumeId);
         //
         resumeId=new DataPOJO();
         resumeId.setPatientName("Camilo Andres");
@@ -245,6 +253,7 @@ public class PatientServices1stImpl implements PatientServices{
         resumeId.setGameName("Diferencias");
         resumeId.setLevelReached(6);
         resumeId.setTimeSpendMilisenconds(new Long(60000));
+        resumesId.add(resumeId);
         //
         resumeId=new DataPOJO();
         resumeId.setPatientName("Angie Valeria");
@@ -265,6 +274,7 @@ public class PatientServices1stImpl implements PatientServices{
         resumeId.setGameName("Diferencias");
         resumeId.setLevelReached(1);
         resumeId.setTimeSpendMilisenconds(new Long(9000));
+        resumesId.add(resumeId);
         //
         resumeId=new DataPOJO();
         resumeId.setPatientName("Felipe Andres");

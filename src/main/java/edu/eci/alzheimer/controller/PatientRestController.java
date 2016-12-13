@@ -26,7 +26,6 @@ public class PatientRestController {
     public ResponseEntity<?> getPatientResumeById(@PathVariable Integer idpatient){
         List<DataPOJO> ans=null;
         try {
-            System.out.println("entro");
             ans=services.getResumesById(idpatient);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
