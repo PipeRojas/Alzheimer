@@ -77,8 +77,6 @@ angular.module('myApp.resumeAll', ['ngRoute','ngResource'])
                 }
             }
 
-            console.info(juegosPorPartidaslabels);
-            console.info(nivelMaximoPorJuegodata);
 
             //Top 10 jugadores que mas juegan
 

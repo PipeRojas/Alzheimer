@@ -58,7 +58,7 @@ public class PatientServices1stImpl implements PatientServices{
         resumeId.setPatientName("Oscar Andres");
         resumeId.setPatientLastName("Castro Luna");
         resumeId.setRegDate(new Date());
-        resumeId.setGameName("Diferencias");
+        resumeId.setGameName("Concentrate");
         resumeId.setLevelReached(9);
         resumeId.setTimeSpendMilisenconds(new Long(60000));
         resumesId.add(resumeId);
