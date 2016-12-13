@@ -1,21 +1,48 @@
-# Alzheimer
-Some services for Alzheimer project  
-Services:  
--Check:  
-  path: patients/check  
-  return: A string  
--GetResumesById:  
-  path: patients/{idPatient}/resume  
-  parameters:Integer, The ID of the patient to get resumes  
-  return: The list of resumes of a patient by his ID  
--PostResumeById:  
-  path: patients/{idPatient}/resume  
-  paramethers: Integer, The ID of the patient to post the resume  
-  requestBody: The resume of the patient of type DataPOJO, Example:  
-      {"patientName":"Maria Camila",  
-      "patientLastName":"Rodriguez Velez",  
-      "gameName":"Sopa Letras",  
-      "levelReached":7,  
-      "regDate":1478982104144,  
-      "timeSpendMilisenconds":30000}  
-HEROKU DEPLOYMENT URL: https://alzheimerpersistence.herokuapp.com/
+# fHealth
+___
+
+URL: https://alzheimerpersistence.hrokuapp.com/
+
+## Diseño e implementación de una plataforma genérica de eHealth y mHealth 
+
+## fHealth API REST
+
+Tipo de datos manejado:  ***JSON***
+
+### Recursos
+
+El API ofrece el siguiente recurso principal:
+
+- patients
+
+Estos se pueden usar solos así:
+
+### Componentes de los recursos
+
+| Recurso | Metodo | Descripción | Parametro | Retorno |
+| :------ | :----- | :---------- | :-------- | :------ |
+| `/patients/check` | **GET** | Retorna el estado en el que se encuentra el servidor | | **String** |
+| `/patients/{idpatient}/resumes` | **GET** | Retorna el reporte de todos los juegos jugados por el paciente dado | **Integer**| **List<DataPOJO>** |
+| `/pacientes/resumes` | **GET** | Retorna el reporte de todos los juegos jugados por todos los pacientes | | **List<DataPOJO>** |
+| `/pacientes/{idpatient}/resume` | **POST** | Guarda el resumen de juego dado para el recurso de paciente específicado por el id| **Integer, DataPOJO** | |
+
+
+### Parametros de URL
+
+| Nombre | Tipo | Descripción |
+| :----- | :--- | :---------- |
+| *idpatient* | **Integer**| Número de identificación del paciente |
+
+### Forma de datos
+
+#### Paciente
+
+	{	
+		"patientName":String,
+		"patientLastName":String,
+		"gameName":String,
+		"levelReached":Integer,
+		"regDate":Date,
+		"timeSpendMilisenconds":Long
+	}
+_______

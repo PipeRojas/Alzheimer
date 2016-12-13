@@ -29,9 +29,6 @@ angular.module('myApp.resumeAll', ['ngRoute','ngResource'])
             var top10MasJueganlabelsSumado=[];
             var top10MasJuegandataSumado=[];
 
-            var top10MasJueganlabels=[];
-            var top10MasJuegandata=[];
-
             var juegosPorPartidaslabels=[];
             var juegosPorPartidasdata=[];
 
@@ -43,24 +40,45 @@ angular.module('myApp.resumeAll', ['ngRoute','ngResource'])
 
             for(var i=0; i<allData.length; i++){
                 var nombre=allData[i].patientName;
-                var inArray=false;
+                var nameinArray=false;
                 for(var j=0; j<top10MasJueganlabelsSumado.length; j++){
-                    console.info(nombre);
-                    console.info(top10MasJueganlabelsSumado[j]);
-                    console.info(nombre==top10MasJueganlabelsSumado[j]);
                     if(nombre==top10MasJueganlabelsSumado[j]){
-                        top10MasJuegandataSumado[i]=top10MasJuegandataSumado[i]+1;
-                        inArray=true;
+                        top10MasJuegandataSumado[j]++;
+                        nameinArray=true;
                     }
                 }
-                if(!inArray){
+                if(!nameinArray){
                     top10MasJueganlabelsSumado.push(nombre);
                     top10MasJuegandataSumado.push(1);
                 }
+
+                var nombreJuego=allData[i].gameName;
+                var gameParties=allData[i].levelReached;
+                var gameMinTime=allData[i].timeSpendMilisenconds;
+                var gameinArray=false;
+
+                for(var n=0; n<juegosPorPartidaslabels.length; n++){
+                    if(nombreJuego==juegosPorPartidaslabels[n]){
+                        juegosPorPartidasdata[n]++;
+                        if(gameParties>nivelMaximoPorJuegodata[n]){
+                            nivelMaximoPorJuegodata[n]=gameParties;
+                        }
+                        if(gameMinTime<tiempoMinimoPorJuegodata[n]){
+                            tiempoMinimoPorJuegodata[n]=gameMinTime;
+                        }
+                        gameinArray=true;
+                    }
+                }
+                if(!gameinArray){
+                    juegosPorPartidaslabels.push(nombreJuego);
+                    juegosPorPartidasdata.push(1);
+                    nivelMaximoPorJuegodata.push(gameParties);
+                    tiempoMinimoPorJuegodata.push(gameMinTime);
+                }
             }
 
-            console.info(top10MasJuegandataSumado);
-            console.info(top10MasJueganlabelsSumado);
+            console.info(juegosPorPartidaslabels);
+            console.info(nivelMaximoPorJuegodata);
 
             //Top 10 jugadores que mas juegan
 
@@ -69,13 +87,10 @@ angular.module('myApp.resumeAll', ['ngRoute','ngResource'])
                 $scope.top10MasJuegan=!$scope.top10MasJuegan;
             };
 
-            $scope.top10MasJueganlabels = ['Laura Gomez', 'Camilo Becerra', 'Santiago Velez', 'Jaime Duarte', 'Daniel Lopez',
-                             'Maria Ortiz', 'Juan Peña', 'Manuel Garcia', 'Laura Granados', 'Daniel Morera'];
+            $scope.top10MasJueganlabels = top10MasJueganlabelsSumado;
             $scope.top10MasJueganseries = ['Pacientes con más Partidas'];
 
-            $scope.top10MasJuegandata = [
-            [200, 178, 169, 158, 146, 143, 140, 136, 125, 120]
-            ];
+            $scope.top10MasJuegandata = top10MasJuegandataSumado;
 
             //Cantidad de partidas por juego
 
@@ -84,10 +99,10 @@ angular.module('myApp.resumeAll', ['ngRoute','ngResource'])
                 $scope.juegosPorPartidas=!$scope.juegosPorPartidas;
             }
 
-            $scope.juegosPorPartidaslabels =["Sopa de Letras", "Parejas", "Crucigrama", "Encuentra Diferencia"];
-
-            $scope.juegosPorPartidasdata =
-            [[65, 59, 90, 81]];
+            $scope.juegosPorPartidaslabels =juegosPorPartidaslabels;
+            var tempjuegosPorPartidasdata=[];
+            tempjuegosPorPartidasdata.push(juegosPorPartidasdata);
+            $scope.juegosPorPartidasdata = tempjuegosPorPartidasdata;
 
             //Nivel máximo por cada juego
 
@@ -96,8 +111,8 @@ angular.module('myApp.resumeAll', ['ngRoute','ngResource'])
                 $scope.nivelMaximoPorJuego=!$scope.nivelMaximoPorJuego;
             }
 
-            $scope.nivelMaximoPorJuegolabels = ["Sopa de Letras", "Parejas", "Crucigrama", "Encuentra Diferencia"];
-            $scope.nivelMaximoPorJuegodata = [7, 9, 10, 5];
+            $scope.nivelMaximoPorJuegolabels = $scope.juegosPorPartidaslabels;
+            $scope.nivelMaximoPorJuegodata = nivelMaximoPorJuegodata;
 
             //Menor tiempo por cada juego
 
@@ -106,8 +121,11 @@ angular.module('myApp.resumeAll', ['ngRoute','ngResource'])
                 $scope.tiempoMinimoPorJuego=!$scope.tiempoMinimoPorJuego;
             }
 
-            $scope.tiempoMinimoPorJuegolabels = ["Sopa de Letras", "Parejas", "Crucigrama", "Encuentra Diferencia"];
-            $scope.tiempoMinimoPorJuegodata = [160, 120, 100, 70];
+            $scope.tiempoMinimoPorJuegolabels = $scope.juegosPorPartidaslabels;
+            for(var m=0; m<tiempoMinimoPorJuegodata.length; m++){
+                tiempoMinimoPorJuegodata[m]=tiempoMinimoPorJuegodata[m]/1000;
+            }
+            $scope.tiempoMinimoPorJuegodata = tiempoMinimoPorJuegodata;
         },
         //error
         function(error){
