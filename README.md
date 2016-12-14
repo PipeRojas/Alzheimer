@@ -56,6 +56,7 @@ Para realizar el proceso es necesario contar previamente con:
 - bower (descarga en https://bower.io/#install-bower)
 - heroku (descarga en https://devcenter.heroku.com/articles/heroku-cli)
 - Tener una cuenta activa en Heroku y en GitHub
+
 _______
 
 -Encuentre el manual con mayor detalle en el siguiente link: https://drive.google.com/file/d/0BwmYDg94_Oz4Y0ZyVXlCbWdUV1E/view?usp=sharing
@@ -76,41 +77,18 @@ Para descargar la aplicación siga estas instrucciones:
 4. Una vez ubicados en el directorio deseado procedemos a clonar el proyecto con el comando git clone y la dirección copiada anteriormente en la página del repositorio:
 	- git clone https://github.com/fHealth/Alzheimer.git
 
-5. Una vez clonado el proyecto, vamos a realizar la instalación de los componentes de bower, para esto debemos ubicarnos en la carpeta static ubicada en el proyecto con el comando:
-	- cd Alzheimer/src/main/resources/static
-ubicados en este directorio ejecutamos el comando:
-	- bower install
-En el momento en el que se nos pide digitar alguna respuesta, digitamos 1 y damos enter para continuar con la descarga
-	- ? Answer
+#### Ejecutar el proyecto de manera local
 
-6. para poder ejecutar el proyecto vamos a utilizar el comando de maven para compilarlo y después de este el comando para correrlo:
+1. para poder ejecutar el proyecto vamos a utilizar el comando de maven para compilarlo y después de este el comando para correrlo:
 	- mvn compile
 	- mvn spring-boot:run
 Debemos ubicarnos en el directorio del proyecto:
 	- cd Alzheimer/
 
-7. Para probar el funcionamiento de la aplicación abrimos en el browser la dirección:
+2. Para probar el funcionamiento de la aplicación abrimos en el browser la dirección:
 	- localhost:8080
 
-#### Manual de usuario
-
-	1. Dentro de la aplicación iniciaremos sesión en la opción que se encuentra en la esquina superior izquierda:
-	- Usuario: user
-	- Contraseña: password
-
-	2. Una vez dentro de la aplicación podemos se nos muestran dos opciones:
-	- Consultar los resultados para un paciente específico
-	- Consultar los resultados para todos los pacientes
-
-		2.1 Si escogemos la primera opción debemos escribir el identificador del paciente deseado y oprimir el botón de cargar datos para poder generar las gráficas.
-
-		2.2 Para la segunda opción se mostrarán diferentes botones para cada gráfica, así mismo sucede con la primero opción después de realizar la carga de los datos.
-
-		2.3 Para cualquiera de las dos opciones al dar click en alguno de los botones se mostrará la gráfica respectiva
-
-		2.4 Para cerrar sesión elegimos la opción que se encuentra en la parte superior izquierda
-
-.8. Para detener el servidor volvemos a la terminal en la que se encuentra corriendo el proyecto y oprimimos ctrl+c lo que detendrá el proceso.
+3. Para detener el servidor volvemos a la terminal en la que se encuentra corriendo el proyecto y oprimimos ctrl+c lo que detendrá el proceso.
 
 #### Despliegue de la aplicación en Heroku
 
@@ -142,5 +120,24 @@ Debemos ubicarnos en el directorio del proyecto:
 	- git push heroku master
 
 10. Para acceder a la aplicación desplegada nos dirijimos al link https://NombreDeMiAplicación.herokuapp.com/
+
+#### Manual de usuario
+
+	1. Dentro de la aplicación iniciaremos sesión en la opción que se encuentra en la esquina superior izquierda:
+	- Usuario: user
+	- Contraseña: password
+
+	2. Una vez dentro de la aplicación podemos se nos muestran dos opciones:
+	- Consultar los resultados para un paciente específico
+	- Consultar los resultados para todos los pacientes
+
+		2.1 Si escogemos la primera opción debemos escribir el identificador del paciente deseado y oprimir el botón de cargar datos para poder generar las gráficas.
+
+		2.2 Para la segunda opción se mostrarán diferentes botones para cada gráfica, así mismo sucede con la primero opción después de realizar la carga de los datos.
+
+		2.3 Para cualquiera de las dos opciones al dar click en alguno de los botones se mostrará la gráfica respectiva
+
+		2.4 Para cerrar sesión elegimos la opción que se encuentra en la parte superior izquierda
+
 
 _______
