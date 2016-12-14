@@ -79,6 +79,8 @@ Para descargar la aplicación siga estas instrucciones:
 	- cd Alzheimer/src/main/resources/static
 ubicados en este directorio ejecutamos el comando:
 	- bower install
+En el momento en el que se nos pide digitar alguna respuesta, digitamos 1 y damos enter para continuar con la descarga
+	- ? Answer
 
 6. para poder ejecutar el proyecto vamos a utilizar el comando de maven para compilarlo y después de este el comando para correrlo:
 	- mvn compile
