@@ -137,9 +137,7 @@ Debemos ubicarnos en el directorio del proyecto:
 8. Después de realizar los cambios se debe hacer commit de los mismos en el nuevo repositorio:
 - git add .
 - git commit -am "Descripción del commit"
-
 Desplegar la aplicación en heroku:
-
 - git push heroku master
 
 9. Para acceder a la aplicación desplegada nos dirijimos al link https://NombreDeMiAplicación.herokuapp.com/
