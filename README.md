@@ -58,6 +58,7 @@ Para realizar el proceso es necesario contar previamente con:
 _______
 
 -Encuentre el manual con mayor detalle en el siguiente link:
+
 -Vídeo de descarga, instalación y despliegues de la aplicación: 
 _______
 
@@ -103,11 +104,11 @@ Debemos ubicarnos en el directorio del proyecto:
 
 		2.2 Para la segunda opción se mostrarán diferentes botones para cada gráfica, así mismo sucede con la primero opción después de realizar la carga de los datos.
 
-	2.3 Para cualquiera de las dos opciones al dar click en alguno de los botones se mostrará la gráfica respectiva
+		2.3 Para cualquiera de las dos opciones al dar click en alguno de los botones se mostrará la gráfica respectiva
 
 		2.4 Para cerrar sesión elegimos la opción que se encuentra en la parte superior izquierda
 
-\8. Para detener el servidor volvemos a la terminal en la que se encuentra corriendo el proyecto y oprimimos ctrl+c lo que detendrá el proceso.
+.8. Para detener el servidor volvemos a la terminal en la que se encuentra corriendo el proyecto y oprimimos ctrl+c lo que detendrá el proceso.
 
 #### Despliegue de la aplicación en Heroku
 
