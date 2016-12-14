@@ -54,9 +54,10 @@ Para realizar el proceso es necesario contar previamente con:
 - git (descarga en https://git-scm.com/downloads)
 - maven (descarga en https://maven.apache.org/download.cgi)
 - bower (descarga en https://bower.io/#install-bower)
+
 _______
 
--Encuentre el manual con mayor detalle en el siguiente link: 
+-Encuentre el manual con mayor detalle en el siguiente link:
 -Vídeo de descarga, instalación y despliegues de la aplicación: 
 _______
 
@@ -69,10 +70,10 @@ Para descargar la aplicación siga estas instrucciones:
 2. Copiar el enlcae para clonar el proyecto
 
 3. Abrir la terminal y ubicarse en el directorio en donde se desea guardar el proyecto con el comando cd:
-- cd Directorio deseado
+	- cd Directorio deseado
 
 4. Una vez ubicados en el directorio deseado procedemos a colnar el proyecto con el comando git clone y la dirección copiada anteriormente en la página del repositorio:
-- git clone https://github.com/PipeRojas/Alzheimer.git
+	- git clone https://github.com/PipeRojas/Alzheimer.git
 
 5. Una vez clonado el proyecto, vamos a realizar la instalación de los componenetes de bower, para esto debemos ubicarnos en la carpeta static ubicada en el proyecto con el comando:
 - cd Alzheimer/src/main/resources/static
