@@ -58,7 +58,7 @@ Para realizar el proceso es necesario contar previamente con:
 - Tener una cuenta activa en Heroku y en GitHub
 _______
 
--Encuentre el manual con mayor detalle en el siguiente link: https://drive.google.com/file/d/0BwmYDg94_Oz4Y3VnMV93cllzUmc/view?usp=sharing
+-Encuentre el manual con mayor detalle en el siguiente link: https://drive.google.com/file/d/0BwmYDg94_Oz4Y0ZyVXlCbWdUV1E/view?usp=sharing
 
 _______
 
@@ -137,8 +137,10 @@ Debemos ubicarnos en el directorio del proyecto:
 8. Después de realizar los cambios se debe hacer commit de los mismos en el nuevo repositorio:
 	- git add .
 	- git commit -am "Descripción del commit"
-Desplegar la aplicación en heroku:
+	
+9. Desplegar la aplicación en heroku:
 	- git push heroku master
 
-9. Para acceder a la aplicación desplegada nos dirijimos al link https://NombreDeMiAplicación.herokuapp.com/
+10. Para acceder a la aplicación desplegada nos dirijimos al link https://NombreDeMiAplicación.herokuapp.com/
+
 _______
