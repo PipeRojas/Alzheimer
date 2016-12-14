@@ -46,3 +46,71 @@ Estos se pueden usar solos así:
 		"timeSpendMilisenconds":Long
 	}
 _______
+
+### Manual de descarga, instalación y despliegue de la aplicación
+_______
+
+Para realizar el proceso es necesario contar previamente con:
+- git (descarga en https://git-scm.com/downloads)
+- maven (descarga en https://maven.apache.org/download.cgi)
+- bower (descarga en https://bower.io/#install-bower)
+_______
+
+-Encuentre el manual con mayor detalle en el siguiente link: 
+-Vídeo de descarga, instalación y despliegues de la aplicación: 
+_______
+
+#### Descarga de la aplicación
+
+Para descargar la aplicación siga estas instrucciones:
+
+1. Abrir el repositorio de la aplicación en GitHub. (https://github.com/PipeRojas/Alzheimer.git)
+
+2. Copiar el enlcae para clonar el proyecto
+
+3. Abrir la terminal y ubicarse en el directorio en donde se desea guardar el proyecto con el comando cd:
+- cd Directorio deseado
+
+4. Una vez ubicados en el directorio deseado procedemos a colnar el proyecto con el comando git clone y la dirección copiada anteriormente en la página del repositorio:
+- git clone https://github.com/PipeRojas/Alzheimer.git
+
+5. Una vez clonado el proyecto, vamos a realizar la instalación de los componenetes de bower, para esto debemos ubicarnos en la carpeta static ubicada en el proyecto con el comando:
+- cd Alzheimer/src/main/resources/static
+ubicados en este directorio ejecutamos el comando:
+- bower install
+
+6. para poder ejecutar el proyecto vamos a utilizar el comando de maven para compilarlo y despúes de este el comando para correrlo:
+- mvn compile
+- mvn spring-boot:run
+Debemos ubicarnos en el directorio del proyecto:
+- cd Alzheimer/
+
+7. Para probar el funcionamiento de la aplicación abrimos en el browser la dirección:
+- localhost:8080
+
+#### Manual de usuario
+
+8. Dentro de la aplicación iniciaremos sesión en la opción que se encuentra en la esquina superior izquierda:
+- Usuario: user
+- Contraseña: password
+
+9. Una vez dentro de la aplicación podemos se nos muestran dos opciones:
+- Consultar los resultados para un paciente específico
+- Consultar los resultados para todos los pacientes
+
+9.1 Si escogemos la primera opción debemos escribir el identificador del paciente deseado y oprimir el botón de cargar datos para poder generar las gráficas.
+
+
+9.2 Para la segunda opción se mostrarán diferentes botones para cada gráfica, así mismo sucede con la primero opción después de realizar la carga de los datos.
+
+9.3 Para cualquiera de las dos opciones al dar click en alguno de los botones se mostrará la gráfica respectiva
+
+
+9.4 Para cerrar sesión elegimos la opción que se encuentra en la parte superior izquierda
+
+10. Para detener el servidor volvemos a la terminal en la que se encuentra corriendo el proyecto y oprimimos ctrl+c lo que detendrá el proceso.
+
+#### Despliegue de la aplicación en Heroku
+
+
+_______
