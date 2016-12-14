@@ -76,40 +76,38 @@ Para descargar la aplicación siga estas instrucciones:
 	- git clone https://github.com/PipeRojas/Alzheimer.git
 
 5. Una vez clonado el proyecto, vamos a realizar la instalación de los componenetes de bower, para esto debemos ubicarnos en la carpeta static ubicada en el proyecto con el comando:
-- cd Alzheimer/src/main/resources/static
+	- cd Alzheimer/src/main/resources/static
 ubicados en este directorio ejecutamos el comando:
-- bower install
+	- bower install
 
 6. para poder ejecutar el proyecto vamos a utilizar el comando de maven para compilarlo y despúes de este el comando para correrlo:
-- mvn compile
-- mvn spring-boot:run
+	- mvn compile
+	- mvn spring-boot:run
 Debemos ubicarnos en el directorio del proyecto:
-- cd Alzheimer/
+	- cd Alzheimer/
 
 7. Para probar el funcionamiento de la aplicación abrimos en el browser la dirección:
-- localhost:8080
+	- localhost:8080
 
 #### Manual de usuario
 
-8. Dentro de la aplicación iniciaremos sesión en la opción que se encuentra en la esquina superior izquierda:
-- Usuario: user
-- Contraseña: password
+	1. Dentro de la aplicación iniciaremos sesión en la opción que se encuentra en la esquina superior izquierda:
+	- Usuario: user
+	- Contraseña: password
 
-9. Una vez dentro de la aplicación podemos se nos muestran dos opciones:
-- Consultar los resultados para un paciente específico
-- Consultar los resultados para todos los pacientes
+	2. Una vez dentro de la aplicación podemos se nos muestran dos opciones:
+	- Consultar los resultados para un paciente específico
+	- Consultar los resultados para todos los pacientes
 
-9.1 Si escogemos la primera opción debemos escribir el identificador del paciente deseado y oprimir el botón de cargar datos para poder generar las gráficas.
+		2.1 Si escogemos la primera opción debemos escribir el identificador del paciente deseado y oprimir el botón de 	cargar datos para poder generar las gráficas.
 
+		2.2 Para la segunda opción se mostrarán diferentes botones para cada gráfica, así mismo sucede con la primero opción 	     después de realizar la carga de los datos.
 
-9.2 Para la segunda opción se mostrarán diferentes botones para cada gráfica, así mismo sucede con la primero opción después de realizar la carga de los datos.
+		2.3 Para cualquiera de las dos opciones al dar click en alguno de los botones se mostrará la gráfica respectiva
 
-9.3 Para cualquiera de las dos opciones al dar click en alguno de los botones se mostrará la gráfica respectiva
+		2.4 Para cerrar sesión elegimos la opción que se encuentra en la parte superior izquierda
 
-
-9.4 Para cerrar sesión elegimos la opción que se encuentra en la parte superior izquierda
-
-10. Para detener el servidor volvemos a la terminal en la que se encuentra corriendo el proyecto y oprimimos ctrl+c lo que detendrá el proceso.
+8. Para detener el servidor volvemos a la terminal en la que se encuentra corriendo el proyecto y oprimimos ctrl+c lo que detendrá el proceso.
 
 #### Despliegue de la aplicación en Heroku
 
