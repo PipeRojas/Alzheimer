@@ -117,28 +117,28 @@ Debemos ubicarnos en el directorio del proyecto:
 1. Entrar a la página de heroku (https://www.heroku.com/) e iniciar sesión, escoger la opción de crear una nueva aplicación y poner el nombre que deseamos.
 
 2. Crear una nueva carpeta en la que se va a crear el proyecto para desplegar, para esto nos ubicamos en el directorio deseado y creamos la carpeta desde la terminal:
-- cd DirectorioDeseado
-- mkdir NombreCarpeta
+	- cd DirectorioDeseado
+	- mkdir NombreCarpeta
 
 3. En la carpeta creada se deben copiar los archivos del repositorio (https://github.com/fHealth/Alzheimer.git) a excepción de la carpeta .git, el archivo README.md y el archivo .gitignore que se encuentran en el directorio raíz del proyecto.
 
 4. Abrir la terminal y ubicarnos en el directorio de la carpeta creada antes con el comando cd:
-- cd DirectorioProyecto
+	- cd DirectorioProyecto
 
 5. Iniciar sesión en la cuenta de heroku con el comando:
-- heroku login
+	- heroku login
 
 6. Crear un nuevo repositorio en GitHub y conectarlo con heroku:
-- git init
-- heroku git:remote -a NombreDeMiAplicación (nombre de la aplicación creada en el paso 1)
+	- git init
+	- heroku git:remote -a NombreDeMiAplicación (nombre de la aplicación creada en el paso 1)
 
 7. Si desea realizar cambios en el proyecto puede realizarlos ahora.
 
 8. Después de realizar los cambios se debe hacer commit de los mismos en el nuevo repositorio:
-- git add .
-- git commit -am "Descripción del commit"
+	- git add .
+	- git commit -am "Descripción del commit"
 Desplegar la aplicación en heroku:
-- git push heroku master
+	- git push heroku master
 
 9. Para acceder a la aplicación desplegada nos dirijimos al link https://NombreDeMiAplicación.herokuapp.com/
 _______
