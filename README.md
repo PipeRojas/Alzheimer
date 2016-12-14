@@ -1,9 +1,9 @@
-# fHealth
+# f-Health
 ___
 
 URL: https://alzheimerpersistence.hrokuapp.com/
 
-## Diseño e implementación de una plataforma genérica de eHealth y mHealth 
+## Diseño e implementación de una plataforma genérica para el desarrollo de aplicaciones de e-Health y m-Health 
 
 ## fHealth API REST
 
@@ -57,9 +57,8 @@ Para realizar el proceso es necesario contar previamente con:
 
 _______
 
--Encuentre el manual con mayor detalle en el siguiente link:
+-Encuentre el manual con mayor detalle en el siguiente link: https://drive.google.com/file/d/0BwmYDg94_Oz4Y3VnMV93cllzUmc/view?usp=sharing
 
--Vídeo de descarga, instalación y despliegues de la aplicación: 
 _______
 
 #### Descarga de la aplicación
@@ -68,20 +67,20 @@ Para descargar la aplicación siga estas instrucciones:
 
 1. Abrir el repositorio de la aplicación en GitHub. (https://github.com/PipeRojas/Alzheimer.git)
 
-2. Copiar el enlcae para clonar el proyecto
+2. Copiar el enlace para clonar el proyecto
 
 3. Abrir la terminal y ubicarse en el directorio en donde se desea guardar el proyecto con el comando cd:
 	- cd Directorio deseado
 
-4. Una vez ubicados en el directorio deseado procedemos a colnar el proyecto con el comando git clone y la dirección copiada anteriormente en la página del repositorio:
+4. Una vez ubicados en el directorio deseado procedemos a clonar el proyecto con el comando git clone y la dirección copiada anteriormente en la página del repositorio:
 	- git clone https://github.com/PipeRojas/Alzheimer.git
 
-5. Una vez clonado el proyecto, vamos a realizar la instalación de los componenetes de bower, para esto debemos ubicarnos en la carpeta static ubicada en el proyecto con el comando:
+5. Una vez clonado el proyecto, vamos a realizar la instalación de los componentes de bower, para esto debemos ubicarnos en la carpeta static ubicada en el proyecto con el comando:
 	- cd Alzheimer/src/main/resources/static
 ubicados en este directorio ejecutamos el comando:
 	- bower install
 
-6. para poder ejecutar el proyecto vamos a utilizar el comando de maven para compilarlo y despúes de este el comando para correrlo:
+6. para poder ejecutar el proyecto vamos a utilizar el comando de maven para compilarlo y después de este el comando para correrlo:
 	- mvn compile
 	- mvn spring-boot:run
 Debemos ubicarnos en el directorio del proyecto:
