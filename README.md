@@ -59,7 +59,8 @@ Para realizar el proceso es necesario contar previamente con:
 
 _______
 
--Encuentre el manual con mayor detalle en el siguiente link: https://drive.google.com/file/d/0BwmYDg94_Oz4Y0ZyVXlCbWdUV1E/view?usp=sharing
+-Encuentre el manual con mayor detalle en el siguiente link: 
+https://drive.google.com/file/d/0BwmYDg94_Oz4bUtJOG94dFVscjQ/view?usp=sharing
 
 _______
 
