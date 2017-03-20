@@ -1,7 +1,7 @@
 # f-Health
 ___
 
-URL: https://alzheimerpersistence.hrokuapp.com/
+URL: https://alzheimerpersistence.herokuapp.com/
 
 ## Diseño e implementación de una plataforma genérica para el desarrollo de aplicaciones de e-Health y m-Health 
 
